@@ -1,0 +1,56 @@
+<div *ngIf="plan" class="detail-container">
+  <h2>{{ plan.name }}</h2>
+
+  <div class="card-image">
+    <div class="card-img-overlay"></div>
+    <img [src]="plan.imageUrl" class="detail-img" alt="{{ plan.name }}">
+    <div class="card-text-overlay">
+      <div *ngIf="plan.type === 'nutrition'">
+        <h4>Cardápio:</h4>
+        <ul>
+          <li *ngFor="let meal of plan.meals">
+            {{ meal.name }}:
+            <div>
+              <p><span>{{ meal.calories }}</span> kcal</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="plan.type === 'fitness'">
+        <ul>
+          <li *ngFor="let exercise of plan.exercises">
+            <div>
+              <p>{{ exercise.name }}:</p>
+              <p class="fitness">{{ exercise.duration }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-wrapper">
+    <div class="detail-info">
+      <h3>{{ plan.description }}</h3>
+      <div class="card-info">
+        <h4>Objetivo:</h4>
+        <p>{{ plan.goal }}</p>
+      </div>
+      <div class="card-info">
+        <h4>Duração:</h4>
+        <p>{{ plan.duration }}</p>
+      </div>
+      <div class="card-info">
+        <h4>Nível:</h4>
+        <p>{{ plan.difficulty }}</p>
+      </div>
+      <p *ngIf="plan.type === 'fitness'">Equipamentos: {{ plan.equipment }}</p>
+
+    </div>
+
+    <div class="btn-container">
+      <button [routerLink]="['/']" class="btn btn-secondary">Voltar</button>
+    </div>
+  </div>
+</div>

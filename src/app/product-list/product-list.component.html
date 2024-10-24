@@ -1,0 +1,24 @@
+<h2>Planos de treinos</h2>
+<div class="wrapper">
+  <div class="card-image" *ngFor="let fit of fitness">
+    <button [routerLink]="['/plan', fit.id, fit.type]" class="card-img-overlay"></button>
+    <img [src]="fit.imageUrl" alt="{{ fit.name }}">
+    <div class="card-text-overlay">
+      <h2>{{ fit.name }}</h2>
+      <p>{{ fit.difficulty }}  -  {{ fit.duration }}</p>
+    </div>
+  </div>
+</div>
+
+<h2>Planos de nutrição</h2>
+<div class="wrapper">
+  <div class="card-image" *ngFor="let nutri of nutrition">
+    <button [routerLink]="['/plan', nutri.id, nutri.type]" class="card-img-overlay"></button>
+    <img [src]="nutri.imageUrl" alt="{{ nutri.name }}">
+    <div class="card-text-overlay">
+      <h2>{{ nutri.name }}</h2>
+      <p>{{ nutri.difficulty }}  -  {{ nutri.duration }}</p>
+    </div>
+  </div>
+</div>
+

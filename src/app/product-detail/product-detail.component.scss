@@ -1,0 +1,137 @@
+.detail-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0px 8px rgba($color: #000000, $alpha: 0.4);
+
+  h2 {
+    font-size: 1,5rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+
+.card-image {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  flex: .5;
+
+  .detail-img {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .card-img-overlay {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .8), rgba(0, 0, 0, .95));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    z-index: 0; /* Z-index do overlay para fundo */
+  }
+
+  .card-text-overlay {
+    position: absolute;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    z-index: 1; /* Z-index superior para texto */
+    bottom: 0;
+
+    h4 {
+      font-weight: 550;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      gap: 8px;
+
+      li {
+        font-size: 14px;
+        width: 350px;
+        list-style: none;
+        border-radius: 8px;
+        padding: 6px 8px;
+        font-weight: 400;
+
+        .fitness {
+          padding-left: 16px;
+        }
+
+        div {
+          color: #e6e6e6;
+
+          span {
+            color: #df5e62;
+          }
+        };
+      }
+    }
+  }
+}
+
+
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 16px;
+  flex: 1;
+
+  .detail-info {
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .card-info {
+      display: flex;
+      gap: 4px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.btn-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #1e8449;
+}
